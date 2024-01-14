@@ -1,0 +1,48 @@
+.main-container {
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 10px;
+  color: #ed6f63;
+  font-family: 'NanumSquareExtraBold';
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 30px;
+}
+
+.quotation {
+  margin: 60px 0 10px 0;
+  font-family: 'NanumMyeongjo';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 30px; /* 200% */
+}
+
+.quotation-source {
+  color: #000;
+  font-family: NanumMyeongjo;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 272.727% */
+}
+
+.input-container {
+  margin: 30px 0;
+}
+
+.button-container {
+  margin-top: 60px;
+}
+
+.start-button {
+  font-size: 1.2rem;
+  padding: 9px 30%;
+  background: #ed6f63;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}

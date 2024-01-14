@@ -1,13 +1,36 @@
+@font-face {
+  font-family: 'NanumSquare';
+  src: url(./style/font/NanumSquare_acR.ttf);
+}
+
+@font-face {
+  font-family: 'NanumSquareBold';
+  src: url(./style/font/NanumSquare_acB.ttf);
+}
+
+@font-face {
+  font-family: 'NanumSquareExtraBold';
+  src: url(./style/font/NanumSquare_acEB.ttf);
+}
+
+@font-face {
+  font-family: 'NanumMyeongjo';
+  src: url(./style/font/NanumMyeongjo.ttf);
+}
+
+:root {
+  --font-nanumfont: 'NanumSquare';
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-nanumfont);
+  background-color: #fffcfb;
+  min-width: 375px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
