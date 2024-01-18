@@ -13,15 +13,16 @@ function MainPage() {
       <p className="quotation-source">
         데런 브라운, {'<'}모든 것이 괜찮아지는 기술{'>'}
       </p>
-      <div>
+      <div className="image-container">
         <img className="main-image" alt="작성하는 사람" src="img/main_image.png" />
       </div>
       <div className="input-container">
-        <input></input>
+        <input placeholder="실명을 입력하세요."></input>
+        <span></span>
       </div>
       <div className="button-container">
-        <Link to="/scenario" className="start-button" style={{ textDecoration: 'none' }}>
-          시작하기
+        <Link to="/select_goal" className="start-button" style={{ textDecoration: 'none' }}>
+          이름 입력하고 시작하기
         </Link>
       </div>
     </div>

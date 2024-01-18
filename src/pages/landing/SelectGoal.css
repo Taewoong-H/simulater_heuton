@@ -1,0 +1,72 @@
+.select-goal-container {
+  text-align: center;
+  height: 80vh;
+
+  .title {
+    color: #000;
+    text-align: center;
+    font-family: NanumSquareOTF_ac;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px; /* 160% */
+  }
+
+  .checkbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .cat {
+      margin: 6px;
+      width: 300px;
+      background: #fffcfb;
+      overflow: hidden;
+      float: center;
+    }
+
+    .cat label {
+      float: center;
+      width: 8em;
+    }
+
+    .cat label span {
+      text-align: center;
+      border: 1px solid #949494;
+      border-radius: 10px;
+      padding: 10px 0;
+      display: block;
+    }
+
+    .cat label input {
+      position: absolute;
+      display: none;
+      color: #949494;
+    }
+    /* selects all of the text within the input element and changes the color of the text */
+    .cat label input + span {
+      color: #949494;
+    }
+
+    .cat input:checked + span {
+      color: #000;
+      border: 2px solid #ed6f63 !important;
+      border-radius: 10px;
+    }
+  }
+
+  .button-container {
+    margin-top: 60px;
+  }
+
+  .start-button {
+    font-family: NanumSquareOTF_ac;
+    font-size: 14px;
+    padding: 9px 25%;
+    background: #ed6f63;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+}

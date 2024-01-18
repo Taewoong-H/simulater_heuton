@@ -1,7 +1,10 @@
 import React from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
-import Scenario from './Scenario';
+import SelectGoal from './pages/landing/SelectGoal';
 import MainPage from './pages/MainPage';
+import BasicQuestion1 from './pages/landing/BasicQuestion1';
+import LoadingPage from './pages/landing/LoadingPage';
+import ProgressBar from './components/HeaderProgressBar'; // 추가
 import './App.css';
 
 function App() {
@@ -9,7 +12,9 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<MainPage />} />
-        <Route path="/scenario" element={<Scenario />} />
+        <Route path="/select_goal" element={<SelectGoal />} />
+        <Route path="/basic_question_1" element={<BasicQuestion1 />} />
+        <Route path="/loading" element={<LoadingPage />} />
       </Route>
     </Routes>
   );
@@ -18,7 +23,9 @@ function App() {
 function Layout() {
   return (
     <>
-      <header></header>
+      <header>
+        <ProgressBar />
+      </header>
       <main>
         <Outlet />
       </main>

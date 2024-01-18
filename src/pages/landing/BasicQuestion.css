@@ -1,0 +1,41 @@
+.basic-question-container {
+  text-align: center;
+  height: 80vh;
+
+  .title {
+    color: #000;
+    text-align: center;
+    font-family: NanumSquareOTF_ac;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px; /* 160% */
+  }
+
+  textarea {
+    display: flex;
+    width: 300px;
+    height: 50%;
+    padding: 10px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid #e2e2e2;
+    background: #fff;
+  }
+
+  .button-container {
+    margin-top: 60px;
+  }
+
+  .start-button {
+    font-family: NanumSquareOTF_ac;
+    font-size: 14px;
+    padding: 9px 25%;
+    background: #ed6f63;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+}
