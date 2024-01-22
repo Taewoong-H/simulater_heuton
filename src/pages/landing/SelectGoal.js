@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './SelectGoal.css';
 
-function SelectGoal() {
+function SelectGoal({ data, updateData }) {
+  const [selectValue, setSelectValue] = useState(0);
+
   const checkOnlyOne = (checkThis) => {
     const checkboxes = document.getElementsByName('check-goal');
     for (let i = 0; i < checkboxes.length; i++) {
@@ -10,6 +12,11 @@ function SelectGoal() {
         checkboxes[i].checked = false;
       }
     }
+    setSelectValue(checkThis.value);
+  };
+
+  const handleButtonClick = () => {
+    updateData({ mostImportant: selectValue });
   };
 
   return (
@@ -25,43 +32,43 @@ function SelectGoal() {
             <span>돈 많이 벌기</span>
           </label>
         </div>
-        <div class="cat action">
+        <div className="cat action">
           <label>
             <input type="checkbox" name="check-goal" value="2" onChange={(e) => checkOnlyOne(e.target)} />
             <span>취업하기</span>
           </label>
         </div>
-        <div class="cat action">
+        <div className="cat action">
           <label>
             <input type="checkbox" name="check-goal" value="3" onChange={(e) => checkOnlyOne(e.target)} />
             <span>꿈 이루기</span>
           </label>
         </div>
-        <div class="cat action">
+        <div className="cat action">
           <label>
             <input type="checkbox" name="check-goal" value="4" onChange={(e) => checkOnlyOne(e.target)} />
             <span>연애하기</span>
           </label>
         </div>
-        <div class="cat action">
+        <div className="cat action">
           <label>
             <input type="checkbox" name="check-goal" value="5" onChange={(e) => checkOnlyOne(e.target)} />
             <span>결혼하기</span>
           </label>
         </div>
-        <div class="cat action">
+        <div className="cat action">
           <label>
             <input type="checkbox" name="check-goal" value="6" onChange={(e) => checkOnlyOne(e.target)} />
             <span>행복한 삶 살기</span>
           </label>
         </div>
-        <div class="cat action">
+        <div className="cat action">
           <label>
             <input type="checkbox" name="check-goal" value="7" onChange={(e) => checkOnlyOne(e.target)} />
             <span>회사에 성과내기</span>
           </label>
         </div>
-        <div class="cat action">
+        <div className="cat action">
           <label>
             <input type="checkbox" name="check-goal" value="8" onChange={(e) => checkOnlyOne(e.target)} />
             <span>기타</span>
@@ -69,7 +76,12 @@ function SelectGoal() {
         </div>
       </div>
       <div className="button-container">
-        <Link to="/basic_question_1" className="start-button" style={{ textDecoration: 'none' }}>
+        <Link
+          to="/basic_question_1"
+          className="start-button"
+          onClick={handleButtonClick}
+          style={{ textDecoration: 'none' }}
+        >
           질문 패키기 시작하기
         </Link>
       </div>

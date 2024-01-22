@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './MainPage.css';
 
-function MainPage() {
+function MainPage({ data, updateData }) {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleButtonClick = () => {
+    updateData({ username: inputValue });
+  };
+
   return (
     <div className="main-container">
       <h1 className="title">내가 쓰는 내 이야기</h1>
@@ -17,11 +27,11 @@ function MainPage() {
         <img className="main-image" alt="작성하는 사람" src="img/main_image.png" />
       </div>
       <div className="input-container">
-        <input placeholder="실명을 입력하세요."></input>
+        <input value={inputValue} onChange={handleInputChange} placeholder="실명을 입력하세요."></input>
         <span></span>
       </div>
       <div className="button-container">
-        <Link to="/select_goal" className="start-button" style={{ textDecoration: 'none' }}>
+        <Link to="/select_goal" className="start-button" onClick={handleButtonClick} style={{ textDecoration: 'none' }}>
           이름 입력하고 시작하기
         </Link>
       </div>

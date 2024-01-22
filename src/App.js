@@ -1,20 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import SelectGoal from './pages/landing/SelectGoal';
 import MainPage from './pages/MainPage';
 import BasicQuestion1 from './pages/landing/BasicQuestion1';
-import LoadingPage from './pages/landing/LoadingPage';
+import LoadingPage from './components/LoadingPage';
+import Scenario1 from './pages/scenario/Scenario1';
 import ProgressBar from './components/HeaderProgressBar'; // 추가
 import './App.css';
 
 function App() {
+  const [data, setData] = useState({
+    username: '',
+    mostImportant: '',
+    basicQaObject: [],
+    situation: '',
+    pastScenarios: [],
+  });
+
+  const updateData = (newData) => {
+    setData((prevData) => ({ ...prevData, ...newData }));
+  };
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<MainPage />} />
-        <Route path="/select_goal" element={<SelectGoal />} />
-        <Route path="/basic_question_1" element={<BasicQuestion1 />} />
-        <Route path="/loading" element={<LoadingPage />} />
+        <Route index element={<MainPage data={data} updateData={updateData} />} />
+        <Route path="/select_goal" element={<SelectGoal data={data} updateData={updateData} />} />
+        <Route path="/basic_question_1" element={<BasicQuestion1 data={data} updateData={updateData} />} />
+        <Route path="/scenario_1" element={<Scenario1 data={data} updateData={updateData} />} />
       </Route>
     </Routes>
   );

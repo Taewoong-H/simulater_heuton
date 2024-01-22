@@ -1,0 +1,72 @@
+.scenario-container {
+  text-align: center;
+  height: 80vh;
+
+  .scene {
+    text-align: left;
+    padding: 0px 3px;
+    color: #010101;
+    font-family: NanumSquareOTF_ac;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; /* 166.667% */
+  }
+
+  .scene-options-container {
+    .scene-options {
+      text-align: left;
+      gap: 10px;
+      border-radius: 10px;
+      background: #fff1f0;
+      margin: 20px 0;
+    }
+
+    .scene-options label {
+      width: 8em;
+    }
+
+    .scene-options label p {
+      padding: 20px;
+      border-radius: 10px;
+      display: block;
+      color: #010101;
+      font-family: NanumSquareOTF_ac;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 25px;
+    }
+
+    .scene-options label input {
+      position: absolute;
+      display: none;
+      color: #949494;
+    }
+    /* selects all of the text within the input element and changes the color of the text */
+    .scene-options label input + p {
+      color: #949494;
+    }
+
+    .scene-options input:checked + p {
+      color: #000;
+      border: 2px solid #ed6f63 !important;
+      border-radius: 10px;
+    }
+  }
+
+  .button-container {
+    margin-top: 60px;
+  }
+
+  .start-button {
+    font-family: NanumSquareOTF_ac;
+    font-size: 14px;
+    padding: 9px 25%;
+    background: #ed6f63;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+}
