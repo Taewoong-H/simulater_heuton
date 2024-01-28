@@ -1,0 +1,27 @@
+.result-container {
+  text-align: center;
+  background-color: #260401;
+
+  .title {
+    color: #fff;
+    font-family: NanumSquareOTF_ac;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 25px; /* 100% */
+  }
+
+  .desc-box {
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 30px 10px #ec887e;
+
+    width: 345px;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+
+    height: 562px;
+    overflow: scroll;
+  }
+}

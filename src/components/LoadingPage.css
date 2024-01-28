@@ -1,0 +1,28 @@
+.loading-page {
+  text-align: center;
+  height: 60vh;
+
+  .loading-spinner {
+    width: 100px; /* 이미지의 너비에 맞게 조절 */
+    height: 100px; /* 이미지의 높이에 맞게 조절 */
+    animation: spin 2s linear infinite;
+  }
+
+  .title {
+    margin: 30px 0;
+    color: #ed6f63;
+    font-family: NanumSquareOTF_ac;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 30px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
