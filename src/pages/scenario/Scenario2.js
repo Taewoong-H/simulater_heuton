@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import LoadingPage from '../../components/LoadingPage';
 import Modal from 'react-modal';
 import './Scenario.css';
 
-function Scenario1({ data, updateData }) {
+function Scenario2({ data, updateData }) {
   const [loading, setLoading] = useState(true);
   const [selectValue, setSelectValue] = useState(0);
   const [inputValue, setInputValue] = useState('');
@@ -158,12 +158,7 @@ function Scenario1({ data, updateData }) {
           </Modal>
 
           <div className="button-container">
-            <Link
-              to="/scenario_2"
-              className="start-button"
-              onClick={handleButtonClick}
-              style={{ textDecoration: 'none' }}
-            >
+            <Link to="/result" className="start-button" onClick={handleButtonClick} style={{ textDecoration: 'none' }}>
               다음 시나리오로
             </Link>
           </div>
@@ -173,4 +168,4 @@ function Scenario1({ data, updateData }) {
   );
 }
 
-export default Scenario1;
+export default Scenario2;

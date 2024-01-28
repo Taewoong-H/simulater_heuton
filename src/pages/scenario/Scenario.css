@@ -57,6 +57,12 @@
     }
   }
 
+  .modal {
+    width: 273px;
+    height: 252px;
+    padding: 18px 13px;
+  }
+
   .button-container {
     position: absolute;
     bottom: 60px;
