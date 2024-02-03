@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { mostImportant } from '../../utils/Questions';
 import './SelectGoal.css';
 
 function SelectGoal({ data, updateData }) {
@@ -16,7 +17,7 @@ function SelectGoal({ data, updateData }) {
   };
 
   const handleButtonClick = () => {
-    updateData({ mostImportant: selectValue });
+    updateData({ ...data, mostImportant: selectValue });
   };
 
   return (
@@ -29,49 +30,49 @@ function SelectGoal({ data, updateData }) {
         <div className="cat action">
           <label>
             <input type="checkbox" name="check-goal" value="1" onChange={(e) => checkOnlyOne(e.target)} />
-            <span>돈 많이 벌기</span>
+            <span>{mostImportant[1]}</span>
           </label>
         </div>
         <div className="cat action">
           <label>
             <input type="checkbox" name="check-goal" value="2" onChange={(e) => checkOnlyOne(e.target)} />
-            <span>취업하기</span>
+            <span>{mostImportant[2]}</span>
           </label>
         </div>
         <div className="cat action">
           <label>
             <input type="checkbox" name="check-goal" value="3" onChange={(e) => checkOnlyOne(e.target)} />
-            <span>꿈 이루기</span>
+            <span>{mostImportant[3]}</span>
           </label>
         </div>
         <div className="cat action">
           <label>
             <input type="checkbox" name="check-goal" value="4" onChange={(e) => checkOnlyOne(e.target)} />
-            <span>연애하기</span>
+            <span>{mostImportant[4]}</span>
           </label>
         </div>
         <div className="cat action">
           <label>
             <input type="checkbox" name="check-goal" value="5" onChange={(e) => checkOnlyOne(e.target)} />
-            <span>결혼하기</span>
+            <span>{mostImportant[5]}</span>
           </label>
         </div>
         <div className="cat action">
           <label>
             <input type="checkbox" name="check-goal" value="6" onChange={(e) => checkOnlyOne(e.target)} />
-            <span>행복한 삶 살기</span>
+            <span>{mostImportant[6]}</span>
           </label>
         </div>
         <div className="cat action">
           <label>
             <input type="checkbox" name="check-goal" value="7" onChange={(e) => checkOnlyOne(e.target)} />
-            <span>회사에 성과내기</span>
+            <span>{mostImportant[7]}</span>
           </label>
         </div>
         <div className="cat action">
           <label>
             <input type="checkbox" name="check-goal" value="8" onChange={(e) => checkOnlyOne(e.target)} />
-            <span>기타</span>
+            <span>{mostImportant[8]}</span>
           </label>
         </div>
       </div>

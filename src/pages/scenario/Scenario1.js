@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import LoadingPage from '../../components/LoadingPage';
 import Modal from 'react-modal';
 import './Scenario.css';
@@ -61,7 +61,7 @@ function Scenario1({ data, updateData }) {
   return (
     <>
       {loading ? (
-        <LoadingPage path={1} />
+        <LoadingPage name={data.username} path={1} />
       ) : (
         <div className="scenario-container">
           <p className="scene">

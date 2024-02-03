@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import bookImage from '../style/img/book_image.png';
 import './LoadingPage.css';
 
-const LoadingPage = ({ path }) => {
+const LoadingPage = ({ name, path }) => {
   const scenarioLoading = (
     <div className="loading-page">
       <div>
@@ -9,7 +10,7 @@ const LoadingPage = ({ path }) => {
       </div>
 
       <h2 className="title">
-        오영준 이야기
+        {name} 이야기
         <br /> 시나리오 작성 준비중..
       </h2>
 
@@ -24,7 +25,7 @@ const LoadingPage = ({ path }) => {
   const resultLoading = (
     <div className="loading-page">
       <div>
-        <img className="loading-spinner" src="/img/book_image.png" alt="로딩 중" />
+        <img className="loading-spinner" src={bookImage} alt="로딩 중" />
       </div>
 
       <h2 className="title">오영준 이야기 작성 중..</h2>
